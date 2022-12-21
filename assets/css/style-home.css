@@ -216,14 +216,17 @@ nav {
 
 /* Estilos de pokemon list */
 
-.col-favoritos{
-}
+
 
 .cuerpo-pokemonfav {
 	max-width: 500px;
 	margin: auto;
 	padding: 40px;
-	margin-top: 2em;
+	margin-top: 6em;
 	background-color: rgba(0, 0, 0, 0.418);
 	border-radius: 2em;
+}
+
+.container_list{
+  margin-bottom: 1em;
 }
