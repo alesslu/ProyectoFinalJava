@@ -1,0 +1,52 @@
+###
+POST http://localhost:8000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Prueba",
+    "email": "prueba@gmail.com",
+    "name_user": "prueba",
+    "password": "12345"
+}
+
+###
+GET http://localhost:8000/api/users HTTP/1.1
+
+###
+GET http://localhost:8000/api/users/63a29b5d72951da0aff94e48 HTTP/1.1
+
+###
+GET http://localhost:8000/api/users/find-by-username-and-password/prueba/12345 HTTP/1.1
+
+###
+PUT http://localhost:8000/api/users/63a29b5d72951da0aff94e48 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Lizbeth Molina",
+    "email": "lizbethmolina@gmail.com",
+    "name_user": "poke",
+    "password": "1234"
+}
+
+###
+DELETE http://localhost:8000/api/users/63a11e20e0fca20235287c2a HTTP/1.1
+
+
+###
+GET http://localhost:8000/api/favoritos HTTP/1.1
+
+###
+POST http://localhost:8000/api/favoritos HTTP/1.1
+Content-Type: application/json
+
+{
+    "pokemon": "vaporeon",
+    "user_id": "ejemplo"
+}
+
+###
+GET http://localhost:8000/api/favoritos HTTP/1.1
+
+###
+GET http://localhost:8000/api/favoritos/find-by-user-id/63a308ae836c7bb0b42ab680 HTTP/1.1
