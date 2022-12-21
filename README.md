@@ -30,3 +30,6 @@
 </ul>
 
 <h2>Sección: G2 J04  Docente: Javier Pacheco </h2>
+
+![image](https://user-images.githubusercontent.com/116766305/208997755-dcf8c1ab-b912-4b97-bdee-74f4f7eab9cc.png)
+
