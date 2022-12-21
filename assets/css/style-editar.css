@@ -1,0 +1,99 @@
+.profile-form {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 100px;
+  background: linear-gradient(0, rgba(62, 17, 96, 0.6), rgb(3, 3, 40, 0.6)) !important;
+  max-width: calc(100vw - 500px) !important;
+  padding: 15px !important;
+  border-radius: 30px;
+  margin-top: 50px;
+}
+
+.profile-form h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+  border: 5px solid rgb(255, 208, 0);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.profile-form textarea {
+  height: 160px;
+  padding: 15px;
+}
+
+.profile-form button {
+  border: 2px solid #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  background-color: transparent;
+  height: 44px;
+  line-height: 40px;
+  display: inline-block;
+  padding: 0px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.profile-form button:hover {
+  background-color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+  color: #1e1e1e;
+}
+
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #c2c2c2;
+  opacity: 1;
+  color: #2d1128;
+  font-weight: bold;
+}
+
+.profile-wrapper .error,
+.profile-wrapper .valido {
+  text-align: left !important;
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.profile-wrapper .error {
+  color: #ff0000 !important;
+}
+
+.profile-wrapper .valido {
+  color: #00ff00 !important;
+}
+
+.profile-wrapper label {
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+}

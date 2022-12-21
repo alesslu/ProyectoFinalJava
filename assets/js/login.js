@@ -1,45 +1,42 @@
-function consultarPokemons() {
-    fetch('http://localhost:9000/api/users')
+let startPage = 'index.html'
+let dashboardPage = 'home.html#2'
+
+let redirectIfUserIsLoggedIn = function () {
+    if (localStorage.getItem('pokeapp_id')) {
+        window.location.href = dashboardPage;
+    }
+}
+
+redirectIfUserIsLoggedIn();
+
+let verifyUserUsingUsernameAndPassword = function (username, password) {
+    fetch(`http://localhost:8000/api/users/find-by-username-and-password/${username}/${password}`)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            let favoritos = data;
-            validarLogin(favoritos)
-            console.log(favoritos)
+            if (!data) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Las credenciales ingresadas son incorrectas o el usuario no existe',
+                    confirmButtonText: 'Aceptar'
+                })
+            } else {
+                localStorage.setItem('pokeapp_id', data._id);
+                localStorage.setItem('pokeapp_name', data.name);
+                window.location.href = dashboardPage;
+            }
         })
 }
 
 
-const form = document.getElementById('form-login');
-const username = document.getElementById('username-login');
-const password = document.getElementById('password-login');
+const loginForm = document.getElementById('form-login');
+const loginUsername = document.getElementById('username-login');
+const loginPassword = document.getElementById('password-login');
 
-form.addEventListener('submit', e => {
+loginForm.addEventListener('submit', e => {
     e.preventDefault();
-
-    consultarPokemons();
-
+    verifyUserUsingUsernameAndPassword(loginUsername.value, loginPassword.value);
 });
-
-
-
-function validarLogin(favoritos) {
-    const usernameValue = username.value;
-    const passwordValue = password.value;
-    const h2 = document.getElementById ('usuariologin')
-    console.log(usernameValue)
-    console.log(passwordValue)
-    console.log(favoritos)
-    let match = favoritos.find(element=> element.username===usernameValue && element.password===passwordValue)
-    console.log(match)
-    if (match){
-        window.location.href = 'home.html';
-        
-    } else {
-        alert("Usuario no registrado")
-    }
-    
-}
-
 

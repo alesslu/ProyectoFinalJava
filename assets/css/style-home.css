@@ -1,105 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  html {
-      overflow: hidden;
-  }
-  
-  body {
-    overflow: hidden;
-    font-size: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
 
-.titulo{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
-    margin-left: 25px;
-    font-size: 35px;
-    color: white;
-  }
+html {
+  overflow: hidden;
+}
 
-p{
-    font-family: "Open Sans", sans-serif;
-    margin-left: 25px;
-    color: white;
+body {
+  overflow: hidden;
+  font-size: 100%;
+}
+
+.titulo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  margin-left: 25px;
+  font-size: 35px;
+  color: white;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  margin-left: 25px;
+  color: white;
 }
 
 nav {
-    text-align: center;
-    position: fixed;
-    z-index: 100;
-    height: 100%;
-    width: 20%;
-    font-weight: 300;
-    font-size: 1rem;
-    border-radius: 20px;
-  }
-  
-  nav em {
-    font-family: roboto;
-    font-weight: 500;
-      font-style: normal;
-      font-size: 13px;
-      text-transform: uppercase;
-      display: block;
-      margin-top: 15px;
-      color: #fff;
-  }
-  
-  
-  nav ul {
-    
-      position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-      text-align: left;
-      list-style-type: none;
-      height: 80%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  nav ul li {
-    border-radius: 1em;
-    background-color: #3169B3;
-    text-align: center;
-    margin: 0px 30px;
-    width: 150px;
-    height: 130px;
-    box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.349);
-  }
-  
-  nav a {
-      text-decoration: none!important;
-      display: inline-block;
-      width: 150px;
-      padding: 20px 0px;
-      position: relative;
-      z-index: 0;
-    color: #3169B3;
-  }
-  
-  nav a:hover{
-    border-radius: 1em;
-    width: 150px;
-    height: 130px;
-    background-color: #DD440A;
-  }
-  
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 20%;
+  font-weight: 300;
+  font-size: 1rem;
+  border-radius: 20px;
+}
 
-  
+nav em {
+  font-family: roboto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 15px;
+  color: #fff;
+}
+
+
+nav ul {
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  list-style-type: none;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+nav ul li {
+  border-radius: 1em;
+  background-color: #3169B3;
+  text-align: center;
+  margin: 0px 30px;
+  width: 150px;
+  height: 130px;
+  box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.349);
+}
+
+nav a {
+  text-decoration: none !important;
+  display: inline-block;
+  width: 150px;
+  padding: 20px 0px;
+  position: relative;
+  z-index: 0;
+  color: #3169B3;
+}
+
+nav a:hover {
+  border-radius: 1em;
+  width: 150px;
+  height: 130px;
+  background-color: #DD440A;
+}
+
+
+
 .slides {
   width: 500vw;
   height: 100vh;
@@ -127,16 +127,16 @@ nav {
 }
 
 .content::-webkit-scrollbar {
-  display: none!important;
-  opacity: 0!important;
-  visibility: hidden!important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 
 .content::-webkit-scrollbar-thumb {
-  display: none!important;
-  opacity: 0!important;
-  visibility: hidden!important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .slides .slide {
@@ -156,11 +156,16 @@ nav {
 }
 
 .slides .slide:nth-child(3) {
-  background-image: url(../images/fondo3.jpg);
+  background-image: url(../images/pokepikachu.jpg);
   background-position: fixed;
 }
 
-#slider-wrapper{
+.slides .slide:nth-child(4) {
+  background-image: url(../images/fondo-pikachu.jpg);
+  background-position: fixed;
+}
+
+#slider-wrapper {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -189,7 +194,7 @@ nav {
   top: 0;
   left: 100%;
   width: 100%;
-  height:100%; 
+  height: 100%;
 }
 
 #image-slider ul li {
@@ -209,7 +214,7 @@ nav {
   background-repeat: repeat-x;
 }
 
-#image-slider ul li.active-img{
+#image-slider ul li.active-img {
   left: 0;
 }
 
@@ -219,14 +224,14 @@ nav {
 
 
 .cuerpo-pokemonfav {
-	max-width: 500px;
-	margin: auto;
-	padding: 40px;
-	margin-top: 6em;
-	background-color: rgba(0, 0, 0, 0.418);
-	border-radius: 2em;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.418);
+  border-radius: 2em;
 }
 
-.container_list{
+.container_list {
   margin-bottom: 1em;
 }

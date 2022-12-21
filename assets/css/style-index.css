@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 }
 
 html {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
   font-size: 100%;
 }
 
-.titulo{
+.titulo {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   margin-left: 25px;
@@ -39,29 +38,29 @@ nav {
 nav em {
   font-family: roboto;
   font-weight: 500;
-	font-style: normal;
-	font-size: 13px;
-	text-transform: uppercase;
-	display: block;
-	margin-top: 15px;
-	color: #fff;
+  font-style: normal;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 15px;
+  color: #fff;
 }
 
 
 nav ul {
-  
-	position: relative;
+
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	text-align: left;
-	list-style-type: none;
-	height: 80%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
+  text-align: left;
+  list-style-type: none;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   justify-content: space-around;
@@ -70,24 +69,24 @@ nav ul {
 nav ul li {
   border-radius: 1em;
   background-color: #3169B3;
-	text-align: center;
-	margin: 0px 30px;
+  text-align: center;
+  margin: 0px 30px;
   width: 150px;
   height: 130px;
   box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.349);
 }
 
 nav a {
-	text-decoration: none!important;
-	display: inline-block;
-	width: 150px;
-	padding: 20px 0px;
-	position: relative;
-	z-index: 0;
+  text-decoration: none !important;
+  display: inline-block;
+  width: 150px;
+  padding: 20px 0px;
+  position: relative;
+  z-index: 0;
   color: #3169B3;
 }
 
-nav a.active{
+nav a.active {
   border-radius: 1em;
   width: 150px;
   height: 130px;
@@ -121,16 +120,16 @@ nav a.active{
 }
 
 .content::-webkit-scrollbar {
-  display: none!important;
-  opacity: 0!important;
-  visibility: hidden!important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 
 .content::-webkit-scrollbar-thumb {
-  display: none!important;
-  opacity: 0!important;
-  visibility: hidden!important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .slides .slide {
@@ -154,7 +153,12 @@ nav a.active{
   background-position: fixed;
 }
 
-#slider-wrapper{
+.slides .slide:nth-child(4) {
+  background-image: url(../images/fondo3.jpg);
+  background-position: fixed;
+}
+
+#slider-wrapper {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -183,7 +187,7 @@ nav a.active{
   top: 0;
   left: 100%;
   width: 100%;
-  height:100%; 
+  height: 100%;
 }
 
 #image-slider ul li {
@@ -198,7 +202,7 @@ nav a.active{
   background-repeat: repeat-x;
 }
 
-#image-slider ul li.active-img{
+#image-slider ul li.active-img {
   left: 0;
 }
 
@@ -209,6 +213,7 @@ nav a.active{
   top: 50%;
   transform: translateY(-50%);
 }
+
 .slide-caption h4 {
   margin-top: 0px;
   font-size: 20px;
@@ -217,6 +222,7 @@ nav a.active{
   color: white;
 
 }
+
 .slide-caption h2 {
 
   margin-top: 0px;
@@ -229,15 +235,15 @@ nav a.active{
 
 /* Slide Login */
 .second-content {
-	top: 125%!important;
-	transform: translateY(-140%);
+  top: 125% !important;
+  transform: translateY(-140%);
 }
 
 #form,
 #form-login {
   text-align: center;
-  text-align: center; 
-  margin-left: 250px; 
+  text-align: center;
+  margin-left: 250px;
   max-width: 350px;
   margin-bottom: 100px;
   padding: 40px;
@@ -256,7 +262,7 @@ nav a.active{
 
 #form input {
   padding-left: 15px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid #fff;
   border-radius: 0px;
   height: 40px;
@@ -270,7 +276,7 @@ nav a.active{
   outline: none;
   box-shadow: none;
   border: 5px solid rgb(255, 208, 0);
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .form-titulo {
@@ -380,24 +386,24 @@ nav a.active{
 @media (max-width: 991px) {
 
   .slides .slide .content {
-	width: 100%;
-	height: 90%;
-	left: 0;
+    width: 100%;
+    height: 90%;
+    left: 0;
   }
-  
+
   .second-content {
-	top: 250%!important;
-	transform: translateY(-250%);
+    top: 250% !important;
+    transform: translateY(-250%);
   }
 
   .third-content {
-	top: 140%!important;
-	transform: translateY(-140%);
+    top: 140% !important;
+    transform: translateY(-140%);
   }
-  
+
   .fourth-content {
-	top: 220%!important;
-	transform: translateY(-220%);
+    top: 220% !important;
+    transform: translateY(-220%);
   }
 
   nav {
@@ -417,7 +423,7 @@ nav a.active{
   }
 
   nav ul li img {
-	width: 35%;
+    width: 35%;
   }
 
   nav ul li em {
@@ -425,9 +431,9 @@ nav a.active{
   }
 
   nav a {
-  	text-align: center;
-	  width: 60px;
-	  height: 60px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
     line-height: 30px;
     display: inline-block;
   }
@@ -437,7 +443,7 @@ nav a.active{
   }
 
   .slide-caption h2 {
-  	font-size: 48px;
+    font-size: 48px;
   }
 
   .tabs-content {
@@ -466,6 +472,7 @@ nav a.active{
   .slide-caption {
     padding-left: 30px;
   }
+
   #tabs ul li span {
     width: 60px;
     height: 60px;
@@ -476,6 +483,7 @@ nav a.active{
   #tabs ul .ui-tabs-active span {
     line-height: 60px;
   }
+
   .featured-item {
     padding: 30px 15px;
   }

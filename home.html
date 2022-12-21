@@ -1,75 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Home</title>
+  <title>Home</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- fot alerts using sweetalert2 -->
+  <link href="vendor/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+
+  <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style-home.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/style-home.css">
+  <link rel="stylesheet" href="assets/css/style-editar.css">
+  <link rel="stylesheet" href="assets/css/style-favoritos.css">
 
-  </head>
+</head>
+
 <body>
+  <nav>
+    <ul>
+      <li>
+        <a href="#1">
+          <img src="./assets/images/iconos/pokeball.png" alt="">
+          <em class="ola">Mi<br>perfil</em>
+        </a>
+      </li>
+      <li>
+        <a href="#2">
+          <img src="./assets/images/iconos/flecha.png" alt="">
+          <em>Lista de<br>Pokemones</em>
+        </a>
+      </li>
+      <li>
+        <a href="#3">
+          <img src="./assets/images/iconos/pikachu.png" alt="">
+          <em>Pokemons<br>favoritos</em>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="logOut()">
+          <img src="./assets/images/iconos/logout.png" width="48px" height="48px" alt="">
+          <em>Cerrar <br>sesión</em>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <nav>
-
-        <ul>
-          <h1 class="titulo">¡Bienvenido!</h1>
-          <li><a href="#1"><img src="./assets/images/iconos/pokeball.png" alt=""> <em class="ola">Perfil del <br>usuario</em></a></li>
-          <li><a href="#2"><img src="./assets/images/iconos/flecha.png" alt=""> <em>Lista de <br>Pokemones</em></a></li>
-          <li><a href="#3"><img src="./assets/images/iconos/pikachu.png" alt=""> <em>Pokemons <br>favs</em></a></li>
-        </ul>
-      </nav>
-      
-
-
-      <div class="slides">
-        <div class="slide" id="1">
-            <div id="slider-wrapper">
-              <div id="image-principalr">
-            </div>
+  <div class="slides">
+    <div class="slide" id="1">
+      <h1 class="titulo m-0 py-2 px-2 text-white text-center" style="font-size: 13px;">Bienvenido(a)
+        <span class="user_logged"></span>
+      </h1>
+      <div id="slider-wrapper">
+        <div id="image-principalr" class="profile-wrapper">
+          <form id="formEdit" class="profile-form" action="" method="post">
+            <div class="row">
+              <h2 class="mb-1">Mi perfil</h2>
+              <div class="mb-1">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTDXA5kZ3ZfxpBGAVg5MU7SjShGi1MjTGRsFjxu8xF87jkTDAvSMrmuKpRYQjuQ4KSQ8E&usqp=CAU"
+                  class="avatar rounded-circle img-thumbnail m-auto" style="width: 140px" alt="avatar">
+              </div>
+              <div class="col-md-12 mb-1">
+                <div class="alert alert-success" role="alert" id="mensaje-correcto-editar">
+                  Datos editados correctamente
+                </div>
+              </div>
+              <div class="col-md-12 mb-3 input-control">
+                <fieldset>
+                  <label for="nameEdit">Nombre completo</label>
+                  <input class="form-control" placeholder="Nombre completo" type="text" value="" id="nameEdit" disabled>
+                  <div class="error"></div>
+                  <div class="valido"></div>
+                </fieldset>
+              </div>
+              <div class="col-md-6 mb-3 input-control">
+                <fieldset>
+                  <label for="emailEdit">Correo electrónico</label>
+                  <input class="form-control" placeholder="Correo electrónico" type="text" value="" id="emailEdit"
+                    disabled>
+                  <div class="error"></div>
+                  <div class="valido"></div>
+                </fieldset>
+              </div>
+              <div class="col-md-6 mb-3 input-control">
+                <fieldset>
+                  <label for="usernameEdit">Nombre de usuario</label>
+                  <input class="form-control" placeholder="Nombre de usuario" type="text" value="" id="usernameEdit"
+                    disabled>
+                  <div class="error"></div>
+                  <div class="valido"></div>
+                </fieldset>
+              </div>
+              <div class="col-md-6 mb-3 input-control">
+                <fieldset>
+                  <label for="passwordEdit">Contraseña</label>
+                  <input class="form-control" placeholder="Contraseña" type="password" value="" id="passwordEdit"
+                    disabled>
+                  <div class="error"></div>
+                  <div class="valido"></div>
+                </fieldset>
+              </div>
+              <div class="col-md-6 mb-3 input-control">
+                <fieldset>
+                  <label for="confirpassEdit">Confirmar contraseña</label>
+                  <input class="form-control" placeholder="Confirmar contraseña" type="password" value=""
+                    id="confirpassEdit" disabled>
+                  <div class="error"></div>
+                  <div class="valido"></div>
+                </fieldset>
+              </div>
+              <div class="row">
+                <div class="col-md-6 text-start">
+                  <button type="button" class="btn btn-success btn-md mr-2 rounded-pill" id="btnEdit"
+                    onclick="enableFields()">Editar</button>
+                  <button type="submit" class="btn btn-primary btn-md rounded-pill" id="btnGuardarEdit"
+                    onclick="updateUser('63a240cced216ed17ad9fc16')">Guardar</button>
+                </div>
+                <div class="col-md-6 text-end">
+                  <button type="button" class="btn btn-danger btn-md rounded-pill" id="btnEliminarEdit">Eliminar mi
+                    cuenta</button>
+                </div>
+              </div>
+          </form>
         </div>
-      </div>  
+      </div>
+    </div>
 
 
 
-      <!-- Segunda Sección -->
-      <div class="slide" id="2">
-        <div class="cuerpo-pokemonfav">
-          <h1 class="titulo">ELIGE TU POKEMON</h1>
+    <!-- Segunda Sección -->
+    <div class="slide" id="2">
+      <h1 class="titulo m-0 py-2 px-2 text-white text-center" style="font-size: 13px;">Bienvenido(a)
+        <span class="user_logged"></span>
+      </h1>
+      <div class="cuerpo-pokemonfav">
+        <h1 class="titulo">ELIGE TU POKEMON</h1>
+        <br>
+        <div class="card_lista" id="cards">
+          <div class="container_list" id="pokemons">
+          </div>
+
+          <div class="col-favoritos">
+            <button type="submit" onclick="favorite();" class="btn btn-primary btn-lg btn-block ">AGREGAR A FAVORITOS<i
+                class="fa fa-star"></i></button>
+          </div>
           <br>
-            <div class="card_lista" id="cards" >
-               <div class="container_list" id="pokemons">  
-                </div>
-             
-                <div class="col-favoritos">
-                  <button type="submit" onclick="favorite();" class="btn btn-primary btn-lg btn-block ">AGREGAR A FAVORITOS<i class="fa fa-star"></i></button>
-                </div>
-                <br>
-             </div>         
         </div>
-       </div>
+      </div>
+    </div>
 
+    <!-- Segunda Sección -->
+    <div class="slide" style="overflow-y: auto;" id="3">
+      <h1 class="titulo m-0 py-2 px-2 text-white text-center" style="font-size: 13px;">Bienvenido(a)
+        <span class="user_logged"></span>
+      </h1>
+      <div class="cuerpo-pokemonfav">
+        <h1 class="titulo">MIS POKEMONES FAVORITOS</h1>
+        <br>
+        <div class="container row" id="lists__pokemons"></div>
+      </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- fot alerts using sweetalert2 -->
+    <script src="vendor/sweetalert2/sweetalert2.min.js"></script>
+    <script src="assets/js/pokemonlist.js"></script>
+    <script src="assets/js/edit.js"></script>
+    <script src="assets/js/pokemones-favoritos.js"></script>
 
-<script src="assets/js/pokemonlist.js"></script>
+    <script>
+      let startPage = 'index.html'
+      let logOut = function () {
+        localStorage.clear()
+        window.location.href = startPage
+      }
 
+      let redirectIfUserNotLoggedIn = function () {
+        if (!localStorage.getItem('pokeapp_id')) {
+          window.location.href = startPage;
+        }
+      }
 
+      redirectIfUserNotLoggedIn()
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,22 @@
+.favoritos{
+    width: 250px;
+    background: rgb(237, 241, 174)!important;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px 0 #afafaf;
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column-reverse;
+
+
+}
+.favoritos img{
+    max-height: 220px;
+}
+.favoritos button{
+    margin-top: 10px;
+    font-size: 14px;
+}
