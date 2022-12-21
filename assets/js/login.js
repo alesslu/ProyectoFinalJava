@@ -1,35 +1,45 @@
+function consultarPokemons() {
+    fetch('http://localhost:9000/api/users')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            let favoritos = data;
+            validarLogin(favoritos)
+            console.log(favoritos)
+        })
+}
 
-const form = document.getElementById('form');
+
+const form = document.getElementById('form-login');
 const username = document.getElementById('username-login');
 const password = document.getElementById('password-login');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    loginuser();
+    consultarPokemons();
 
 });
 
-function getUsers(){
-    fetch(`http://localhost:9000/api/users`)
-    .then(response => response.json())
-    .then(data => console.log(data));
-    return data
-}
 
-const loginuser = () =>{
-    let data = getUsers();
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
-    console.log (usernameValue)
-    console.log (passwordValue)
 
-    let match = data.find(element => element.username === usernameValue && element.password === passwordValue)
+function validarLogin(favoritos) {
+    const usernameValue = username.value;
+    const passwordValue = password.value;
+    const h2 = document.getElementById ('usuariologin')
+    console.log(usernameValue)
+    console.log(passwordValue)
+    console.log(favoritos)
+    let match = favoritos.find(element=> element.username===usernameValue && element.password===passwordValue)
+    console.log(match)
     if (match){
-        alert("inciaste")
+        window.location.href = 'indexusuario.html';
+        
     } else {
-        alert("error")
+        alert("Usuario no registrado")
     }
+    
 }
 
 

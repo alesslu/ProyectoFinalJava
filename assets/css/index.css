@@ -232,7 +232,8 @@ nav a.active{
 	transform: translateY(-140%);
 }
 
-#form {
+#form,
+#form-login {
   text-align: center;
   text-align: center; 
   margin-left: 250px; 
